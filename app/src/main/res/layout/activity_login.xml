@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_login"
+    tools:context=".ui.activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/imgLoginPastry"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:contentDescription="@string/logo_main_desc"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_pastry_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgLoginLogo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/login_image_pastry_desc"
+        android:src="@drawable/gold_brand_logo"
+        app:layout_constraintBottom_toBottomOf="@+id/imgLoginPastry"
+        app:layout_constraintEnd_toEndOf="@+id/imgLoginPastry"
+        app:layout_constraintStart_toStartOf="@+id/imgLoginPastry"
+        app:layout_constraintTop_toTopOf="@+id/imgLoginPastry"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/txtLoginApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="@string/login_to_app"
+        android:textSize="@dimen/text_normal_size"
+        android:textColor="@color/black_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLoginPastry" />
+
+    <TextView
+        android:id="@+id/txtFrenchPastry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mobile_shop"
+        android:textColor="@color/black_main"
+        android:textSize="@dimen/heading_large_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtLoginApp"
+        app:layout_constraintTop_toBottomOf="@+id/txtLoginApp" />
+
+    <ir.hamedmahmoodi.mobileshop.ui.customView.CustomEditText
+        android:id="@+id/inputTextPhone"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:type="3"
+        app:max="11"
+        app:hintText="@string/_09"
+        app:layout_constraintEnd_toEndOf="@+id/txtFrenchPastry"
+        app:layout_constraintTop_toBottomOf="@+id/txtFrenchPastry"/>
+
+
+    <ir.hamedmahmoodi.mobileshop.ui.customView.CustomButton
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        app:buttonText="@string/send_code"
+        app:layout_constraintEnd_toEndOf="@+id/inputTextPhone"
+        app:layout_constraintTop_toBottomOf="@+id/inputTextPhone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

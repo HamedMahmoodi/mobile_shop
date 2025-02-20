@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MobileShop</string>
+    <string name="logo_brand_desc">LogoBrand</string>
+    <string name="logo_main_desc">logo main</string>
+    <string name="login_image_pastry_desc">login image pastry</string>
+    <string name="login_to_app">ورود به برنامه</string>
+    <string name="mobile_shop">موبایل شاپ</string>
+    <string name="_09">09*********</string>
+    <string name="send_code">ارسال کد تایید</string>
+    <string name="not_internet">لطفا گوشی خود را به اینترنت متصل کنید</string>
+    <string name="error">خطا</string>
+    <string name="settings">تنظیمات</string>
+    <string name="retry">تلاش مجدد</string>
+    <string name="code_login">کد تایید</string>
+    <string name="confirm_code">تایید کد و ادامه</string>
+    <string name="edit_phone">ویرایش شماره</string>
+    <string name="resend_code">ارسال مجدد</string>
+    <string name="enter_code_sample">_ _ _ _ _</string>
+</resources>
