@@ -16,4 +16,22 @@
     <string name="edit_phone">ویرایش شماره</string>
     <string name="resend_code">ارسال مجدد</string>
     <string name="enter_code_sample">_ _ _ _ _</string>
+    <string name="shopping_desc">shopping</string>
+    <string name="alert_icon_desc">alert_icon</string>
+    <string name="menu">menu</string>
+    <string name="arrow_desc">arrow</string>
+    <string name="close_desc">close</string>
+    <string name="logout">خروج از حساب کاربری</string>
+    <string name="upgrade">بروز رسانی نرم افزار</string>
+    <string name="contact_us">ارتباط با ما</string>
+    <string name="about_us">درباره ما</string>
+    <string name="support">پشتیبانی</string>
+    <string name="my_orders">سفارشات من</string>
+    <string name="image_desc">image</string>
+    <string name="orders_desc">orders</string>
+    <string name="support_desc">support</string>
+    <string name="about_desc">about</string>
+    <string name="contact_desc">contact</string>
+    <string name="update_desc">update</string>
+    <string name="logout_desc">logout</string>
 </resources>

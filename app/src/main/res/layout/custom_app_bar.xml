@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/white_main"
+        android:layout_height="55dp"
+        android:layoutDirection="rtl"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgShopping"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:visibility="invisible"
+        android:contentDescription="@string/shopping_desc"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgBack"
+        app:layout_constraintStart_toEndOf="@+id/imgBack"
+        app:layout_constraintTop_toTopOf="@+id/imgBack"
+        app:srcCompat="@drawable/ic_shopping_cart_black" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:contentDescription="@string/logo_main_desc"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:srcCompat="@drawable/gold_brand_logo" />
+
+    <ImageView
+        android:id="@+id/imgAlert"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="12dp"
+        android:contentDescription="@string/alert_icon_desc"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toEndOf="@+id/imgBack"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:srcCompat="@drawable/ic_alert" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/back_circle_shopping_cart"
+        app:layout_constraintBottom_toTopOf="@+id/imgAlert"
+        app:layout_constraintStart_toStartOf="@+id/imgAlert"
+        app:layout_constraintTop_toTopOf="@+id/imgAlert" />
+
+    <TextView
+        android:id="@+id/txtAlertCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_main"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view6"
+        app:layout_constraintEnd_toEndOf="@+id/view6"
+        app:layout_constraintStart_toStartOf="@+id/view6"
+        app:layout_constraintTop_toTopOf="@+id/view6"
+        tools:text="55" />
+
+    <ImageView
+        android:id="@+id/imgMenu"
+        android:layout_width="28dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/menu"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_menu" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/countGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:constraint_referenced_ids="view6,txtAlertCount"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="@drawable/back_top_view_bottom_nav"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:visibility="gone"
+        android:contentDescription="@string/arrow_desc"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_left" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

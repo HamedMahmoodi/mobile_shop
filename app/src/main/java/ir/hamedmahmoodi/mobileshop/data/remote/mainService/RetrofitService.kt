@@ -1,6 +1,8 @@
 package ir.hamedmahmoodi.mobileshop.data.remote.mainService
 
 import ir.hamedmahmoodi.mobileshop.data.remote.apiRepository.LoginApiService
+import ir.hamedmahmoodi.mobileshop.data.remote.apiRepository.MainApiService
+import ir.hamedmahmoodi.mobileshop.data.remote.apiRepository.UserApiService
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -23,8 +25,9 @@ object RetrofitService {
         .build()
 
     val apiService: LoginApiService = retrofit.create(LoginApiService::class.java)
-  /*  val mainApiService: MainApiService = retrofit.create(MainApiService::class.java)
     val userApiService: UserApiService = retrofit.create(UserApiService::class.java)
+    val mainApiService: MainApiService = retrofit.create(MainApiService::class.java)
+  /*
     val catsApiService: CatsApiService = retrofit.create(CatsApiService::class.java)
     val pastryApiService: PastryApiService = retrofit.create(PastryApiService::class.java)
     val addressApiService: AddressApiService = retrofit.create(AddressApiService::class.java)
