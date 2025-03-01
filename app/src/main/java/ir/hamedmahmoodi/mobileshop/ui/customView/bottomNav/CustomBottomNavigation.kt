@@ -4,8 +4,9 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
+import ir.hamedmahmoodi.mobileshop.R
+import ir.hamedmahmoodi.mobileshop.databinding.CustomBottomNavigationBinding
 
-/*
 class CustomBottomNavigation(
     context: Context,
     attributeSet: AttributeSet
@@ -28,14 +29,14 @@ class CustomBottomNavigation(
             activeFragment.setFragment(FragmentType.HOME)
         }
 
-        binding.cake.setOnClickListener {
-            activeCake()
-            activeFragment.setFragment(FragmentType.CAKE)
+        binding.phone.setOnClickListener {
+            activePhone()
+            activeFragment.setFragment(FragmentType.Phone)
         }
 
-        binding.pastry.setOnClickListener {
-            activePastry()
-            activeFragment.setFragment(FragmentType.PASTRY)
+        binding.mobile.setOnClickListener {
+            activeMobile()
+            activeFragment.setFragment(FragmentType.Mobile)
         }
 
         binding.profile.setOnClickListener {
@@ -43,32 +44,40 @@ class CustomBottomNavigation(
             activeFragment.setFragment(FragmentType.PROFILE)
         }
 
+        binding.shoppingCart.setOnClickListener {
+            activeShoppingCart()
+            activeFragment.setFragment(FragmentType.SHOPPINGCART)
+        }
+
     }
 
     private fun activeHome() {
 
         binding.homes.setBackgroundResource(R.drawable.back_item_bottom_nav)
-        binding.cake.background = null
-        binding.pastry.background = null
+        binding.phone.background = null
+        binding.mobile.background = null
         binding.profile.background = null
+        binding.shoppingCart.background = null
 
     }
 
-    private fun activeCake() {
+    private fun activePhone() {
 
-        binding.cake.setBackgroundResource(R.drawable.back_item_bottom_nav)
+        binding.phone.setBackgroundResource(R.drawable.back_item_bottom_nav)
         binding.homes.background = null
-        binding.pastry.background = null
+        binding.mobile.background = null
         binding.profile.background = null
+        binding.shoppingCart.background = null
 
     }
 
-    private fun activePastry() {
+    private fun activeMobile() {
 
-        binding.pastry.setBackgroundResource(R.drawable.back_item_bottom_nav)
+        binding.mobile.setBackgroundResource(R.drawable.back_item_bottom_nav)
         binding.homes.background = null
-        binding.cake.background = null
+        binding.phone.background = null
         binding.profile.background = null
+        binding.shoppingCart.background = null
 
     }
 
@@ -76,8 +85,19 @@ class CustomBottomNavigation(
 
         binding.profile.setBackgroundResource(R.drawable.back_item_bottom_nav)
         binding.homes.background = null
-        binding.cake.background = null
-        binding.pastry.background = null
+        binding.phone.background = null
+        binding.mobile.background = null
+        binding.shoppingCart.background = null
+
+    }
+
+    private fun activeShoppingCart() {
+
+        binding.shoppingCart.setBackgroundResource(R.drawable.back_item_bottom_nav)
+        binding.homes.background = null
+        binding.phone.background = null
+        binding.mobile.background = null
+        binding.profile.background = null
 
     }
 
@@ -86,4 +106,4 @@ class CustomBottomNavigation(
         binding.txtShoppingCount.text = count
     }
 
-}*/
+}

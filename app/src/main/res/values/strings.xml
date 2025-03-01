@@ -34,4 +34,9 @@
     <string name="contact_desc">contact</string>
     <string name="update_desc">update</string>
     <string name="logout_desc">logout</string>
+    <string name="image_home_desc">image_home</string>
+    <string name="image_shop_desc">image_shop</string>
+    <string name="image_mobile_desc">image_mobile</string>
+    <string name="image_profile_desc">image_profile</string>
+    <string name="image_shopping_desc">image_shopping</string>
 </resources>

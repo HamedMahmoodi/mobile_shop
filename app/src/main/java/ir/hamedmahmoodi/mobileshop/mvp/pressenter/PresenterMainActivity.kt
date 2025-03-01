@@ -11,16 +11,14 @@ class PresenterMainActivity(
     override fun onCreate() {
         view.initialize()
         showNavigationDrawer()
-        //TODO initBottomNavigation
-     /*   initBottomNavigation()*/
+       initBottomNavigation()
     }
 
     private fun showNavigationDrawer() {
         view.showNavDrawer()
     }
 
-    //TODO initBottomNavigation
-  /*  private fun initBottomNavigation(){
+    private fun initBottomNavigation(){
         view.initBottomNav()
-    }*/
+    }
 }

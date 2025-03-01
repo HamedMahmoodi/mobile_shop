@@ -34,11 +34,14 @@ class ViewMainActivity : FrameLayout, ActiveFragment {
         val fragment = when (type) {
             FragmentType.HOME -> HomeFragment(context, activityUtils)
             //TODO CakeCatsFragment
-                FragmentType.CAKE ->HomeFragment(context, activityUtils) /*CakeCatsFragment(context)*/
+                FragmentType.Phone ->HomeFragment(context, activityUtils) /*CakeCatsFragment(context)*/
             //TODO PastryCatsFragment
-                FragmentType.PASTRY -> HomeFragment(context, activityUtils) /*PastryCatsFragment(context)*/
+                FragmentType.Mobile -> HomeFragment(context, activityUtils) /*PastryCatsFragment(context)*/
             //TODO ProfileFragment
                 FragmentType.PROFILE ->HomeFragment(context, activityUtils) /*ProfileFragment(context)*/
+            //TODO SHOPPINGCARTFragment
+            FragmentType.SHOPPINGCART ->HomeFragment(context, activityUtils) /*ShoppingCartFragment(context)*/
+
         }
 
         activityUtils.setFragment(fragment)
@@ -49,10 +52,9 @@ class ViewMainActivity : FrameLayout, ActiveFragment {
         binding.customAppBar.showNavDrawer(context)
     }
 
-    //TODO initBottomNav
-   /* fun initBottomNav() {
+    fun initBottomNav() {
         binding.bottomNav.onClickHelper(this)
-    }*/
+    }
 
 
 }
