@@ -1,5 +1,6 @@
 package ir.hamedmahmoodi.mobileshop.ui.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -90,11 +91,10 @@ class NavDrawerActivity : AppCompatActivity(), OnClickListener {
 
             }
 
-            //TODO About
             R.id.txtAbout -> {
-              /*  startActivity(Intent(this, AboutActivity::class.java))
+                startActivity(Intent(this, AboutActivity::class.java))
                 finish()
-                overridePendingTransition(R.anim.trans_right_in, R.anim.trans_right_out)*/
+                overridePendingTransition(R.anim.trans_right_in, R.anim.trans_right_out)
             }
 
             //TODO Contact
