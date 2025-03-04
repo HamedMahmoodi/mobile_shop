@@ -19,6 +19,9 @@
         android:theme="@style/Theme.MobileShop"
         tools:targetApi="31">
         <activity
+            android:name=".ui.activity.UserActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.NavDrawerActivity"
             android:exported="false" />
         <activity

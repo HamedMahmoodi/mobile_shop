@@ -24,14 +24,14 @@ class MainActivity : AppCompatActivity(), ActivityUtils {
         presenter.onCreate()
 
     }
-//TODO fun setFragment
-    /*override fun setFragment(fragment: Fragment) {
+
+    override fun setFragment(fragment: Fragment) {
 
         supportFragmentManager.beginTransaction()
             .replace(R.id.mainFrameLayout, fragment)
             .commit()
 
-    }*/
+    }
 //TODO fun fun setViewPagerFragment
     /*override fun setViewPagerFragment(viewPager: ViewPager2, data: ArrayList<String>) {
 

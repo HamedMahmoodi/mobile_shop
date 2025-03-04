@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:context=".ui.activity.UserActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#141217">
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="150dp"
+            android:layout_height="140dp"
+            android:contentDescription="@string/image_desc"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customAppBar"
+            app:srcCompat="@drawable/img_profile_lines" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textColor="@color/white_main"
+            android:textSize="@dimen/heading_large_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customAppBar"
+            tools:text="حامد محمودی" />
+
+        <TextView
+            android:id="@+id/txtPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white_main"
+            android:textSize="@dimen/heading_large_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtName"
+            tools:text="09368686685" />
+
+        <ir.hamedmahmoodi.mobileshop.ui.customView.CustomAppBar
+            android:id="@+id/customAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:backIcon="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/view20"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/back_item_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPhone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ir.hamedmahmoodi.mobileshop.ui.customView.CustomEditText
+                    android:id="@+id/txtEditName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="18dp"
+                    android:layout_marginTop="12dp"
+                    app:hintText="نام و نام خانوادگی"
+                    app:iconState="true"
+                    app:rtlSupport="true" />
+
+                <ir.hamedmahmoodi.mobileshop.ui.customView.CustomEditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="18dp"
+                    app:hintText="ایمیل"
+                    app:iconState="true" />
+
+                <ir.hamedmahmoodi.mobileshop.ui.customView.CustomTextView
+                    android:id="@+id/txtAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:layout_marginTop="16dp"
+                    app:customText="آدرس های من"
+                    app:iconState="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="18dp"
+                    android:layout_marginTop="18dp"
+                    android:orientation="horizontal">
+
+                    <ir.hamedmahmoodi.mobileshop.ui.customView.CustomEditText
+                        android:id="@+id/txtYear"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="0.3"
+                        app:centerGravity="true"
+                        app:hintText="سال"
+                        app:iconState="true"
+                        app:max="4"
+                        app:type="2" />
+
+                    <ir.hamedmahmoodi.mobileshop.ui.customView.CustomEditText
+                        android:id="@+id/txtMonth"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="0.2"
+                        app:centerGravity="true"
+                        app:hintText="ماه"
+                        app:iconState="true"
+                        app:max="2"
+                        app:type="2" />
+
+                    <ir.hamedmahmoodi.mobileshop.ui.customView.CustomEditText
+                        android:id="@+id/txtDay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        app:centerGravity="true"
+                        app:hintText="روز"
+                        app:iconState="true"
+                        app:max="2"
+                        app:type="2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="0.3"
+                        android:text="@string/date"
+                        android:textColor="@color/color_text_black"
+                        android:textSize="@dimen/text_large_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="18dp"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/rdg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rdbHide"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layoutDirection="rtl"
+                            android:text="@string/hide" />
+
+                        <RadioButton
+                            android:id="@+id/rdbWomen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layoutDirection="rtl"
+                            android:text="@string/women" />
+
+                        <RadioButton
+                            android:id="@+id/rdbMen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layoutDirection="rtl"
+                            android:text="@string/men" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="4dp"
+                        android:text="@string/sex"
+                        android:textColor="@color/color_text_black"
+                        android:textSize="@dimen/text_large_size" />
+
+                </LinearLayout>
+
+                <ir.hamedmahmoodi.mobileshop.ui.customView.CustomButton
+                    android:id="@+id/btnSaveInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="18dp"
+                    app:buttonText="@string/save_info" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+</FrameLayout>

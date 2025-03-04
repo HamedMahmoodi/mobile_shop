@@ -8,6 +8,7 @@ import ir.hamedmahmoodi.mobileshop.databinding.ActivityMainBinding
 import ir.hamedmahmoodi.mobileshop.ui.customView.bottomNav.ActiveFragment
 import ir.hamedmahmoodi.mobileshop.ui.customView.bottomNav.FragmentType
 import ir.hamedmahmoodi.mobileshop.ui.fragment.HomeFragment
+import ir.hamedmahmoodi.mobileshop.ui.fragment.ProfileFragment
 
 class ViewMainActivity : FrameLayout, ActiveFragment {
 
@@ -32,13 +33,17 @@ class ViewMainActivity : FrameLayout, ActiveFragment {
     override fun setFragment(type: FragmentType) {
 
         val fragment = when (type) {
+
             FragmentType.HOME -> HomeFragment(context, activityUtils)
+
+            FragmentType.PROFILE -> ProfileFragment(context)
+
             //TODO CakeCatsFragment
                 FragmentType.Phone ->HomeFragment(context, activityUtils) /*CakeCatsFragment(context)*/
+
             //TODO PastryCatsFragment
                 FragmentType.Mobile -> HomeFragment(context, activityUtils) /*PastryCatsFragment(context)*/
-            //TODO ProfileFragment
-                FragmentType.PROFILE ->HomeFragment(context, activityUtils) /*ProfileFragment(context)*/
+
             //TODO SHOPPINGCARTFragment
             FragmentType.SHOPPINGCART ->HomeFragment(context, activityUtils) /*ShoppingCartFragment(context)*/
 

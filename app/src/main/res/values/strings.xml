@@ -39,4 +39,12 @@
     <string name="image_mobile_desc">image_mobile</string>
     <string name="image_profile_desc">image_profile</string>
     <string name="image_shopping_desc">image_shopping</string>
+    <string name="date">تاریخ تولد :</string>
+    <string name="hide">نامشخص</string>
+    <string name="women">زن</string>
+    <string name="men">مرد</string>
+    <string name="sex">جنسیت :</string>
+    <string name="save_info">ثبت اطلاعات</string>
+    <string name="state_orders">وضعیت سفارشات</string>
+    <string name="img_order_desc">img_orders</string>
 </resources>
