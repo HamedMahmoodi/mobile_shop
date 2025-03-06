@@ -19,6 +19,12 @@
         android:theme="@style/Theme.MobileShop"
         tools:targetApi="31">
         <activity
+            android:name=".ui.activity.EditAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.AddressActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.AboutActivity"
             android:exported="false" />
         <activity

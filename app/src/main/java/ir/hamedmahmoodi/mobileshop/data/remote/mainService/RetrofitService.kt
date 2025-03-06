@@ -1,5 +1,6 @@
 package ir.hamedmahmoodi.mobileshop.data.remote.mainService
 
+import ir.hamedmahmoodi.mobileshop.data.remote.apiRepository.AddressApiService
 import ir.hamedmahmoodi.mobileshop.data.remote.apiRepository.LoginApiService
 import ir.hamedmahmoodi.mobileshop.data.remote.apiRepository.MainApiService
 import ir.hamedmahmoodi.mobileshop.data.remote.apiRepository.UserApiService
@@ -27,10 +28,10 @@ object RetrofitService {
     val apiService: LoginApiService = retrofit.create(LoginApiService::class.java)
     val userApiService: UserApiService = retrofit.create(UserApiService::class.java)
     val mainApiService: MainApiService = retrofit.create(MainApiService::class.java)
+    val addressApiService: AddressApiService = retrofit.create(AddressApiService::class.java)
   /*
     val catsApiService: CatsApiService = retrofit.create(CatsApiService::class.java)
     val pastryApiService: PastryApiService = retrofit.create(PastryApiService::class.java)
-    val addressApiService: AddressApiService = retrofit.create(AddressApiService::class.java)
     val cakeApiService: CakeApiService = retrofit.create(CakeApiService::class.java)
     val pastriesListApiService: PastryListApiService =
         retrofit.create(PastryListApiService::class.java)*/

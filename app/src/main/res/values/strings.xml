@@ -48,4 +48,14 @@
     <string name="state_orders">وضعیت سفارشات</string>
     <string name="img_order_desc">img_orders</string>
     <string name="about_me">"سوپراپلیکشن موبایل شاپ باهدف ارائه برند های مختلف گوشی همراه جهت دسترسی هرچه بهتر کاربران عزیز و آشنایی با سخت افزار مدل های مختلف گوشی در زمستان سال 1403 راه اندازی شد، کاربران گرامی می توانند با جست و جوی برند مورد نظر گوشی موبایل بنا بر سلیقه خود گوشی موبایل مناسب را از این فروشگاه تهیه کنند. "</string>
+    <string name="receiver">گیرنده :</string>
+    <string name="phone_number">شماره تماس :</string>
+    <string name="address">آدرس :</string>
+    <string name="add_address">افزودن آدرس جدید</string>
+    <string name="f_logo_desc">f_logo</string>
+    <string name="add_new_address">ثبت آدرس</string>
+    <string name="delete_question">آیا مایل به حذف این آدرس هستید؟</string>
+    <string name="delete">حذف</string>
+    <string name="canceling">انصراف</string>
+    <string name="deleting">حذف کن</string>
 </resources>

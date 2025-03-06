@@ -24,6 +24,6 @@
         android:visibility="gone"
         android:layout_gravity="start|center_vertical"
         android:layout_marginStart="12dp"
-        app:srcCompat="@drawable/ic_message_edit" />
+        app:srcCompat="@drawable/ic_edit" />
 
 </FrameLayout>
