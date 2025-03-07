@@ -46,7 +46,7 @@ dependencies {
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.2.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.2.1")
     implementation("androidx.window:window:1.3.0")
     implementation("com.google.firebase:firebase-firestore-ktx:25.1.2")
     testImplementation("junit:junit:4.13.2")
@@ -71,5 +71,14 @@ dependencies {
 
     //Justify Text View
     implementation("com.codesgood:justifiedtextview:1.1.0")
+
+    // Rating Bar
+   /* implementation("com.github.ome450901:SimpleRatingBar:1.5.1")*/
+
+    //Live Data
+      implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.7")
+
+    //Picasso
+     implementation("com.squareup.picasso:picasso:2.8")
 
 }

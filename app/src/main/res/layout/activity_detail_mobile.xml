@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color200"
+    android:layoutDirection="ltr"
+    tools:context=".ui.activity.DetailMobileActivity">
+
+    <ir.hamedmahmoodi.mobileshop.ui.customView.CustomAppBar
+        android:id="@+id/customAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backIcon="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customAppBar">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/allViews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--                <ImageView
+                                    android:id="@+id/imageView8"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:contentDescription="@string/f_logo_desc"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_f" />-->
+
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="@dimen/heading_large_size"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/allViews"
+                    app:layout_constraintStart_toStartOf="@+id/allViews"
+                    app:layout_constraintTop_toTopOf="@+id/allViews"
+                    tools:text="گوشی موبایل شیائومی xiaomi redmi note 12s" />
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPagerSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgComment" />
+
+                <ImageView
+                    android:id="@+id/imgComment"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/comment_desc"
+                    app:layout_constraintStart_toStartOf="@+id/viewPagerSlider"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                    app:srcCompat="@drawable/ic_messages" />
+
+                <View
+                    android:id="@+id/view11"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/back_circle_comment_count"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgComment"
+                    app:layout_constraintEnd_toEndOf="@+id/imgComment"
+                    app:layout_constraintStart_toEndOf="@+id/imgComment"
+                    app:layout_constraintTop_toTopOf="@+id/imgComment"
+                    app:layout_constraintVertical_bias="0.8" />
+
+                <TextView
+                    android:id="@+id/txtCommentCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_main"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view11"
+                    app:layout_constraintEnd_toEndOf="@+id/view11"
+                    app:layout_constraintStart_toStartOf="@+id/view11"
+                    app:layout_constraintTop_toTopOf="@+id/view11"
+                    tools:text="55" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/commentCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="view11,txtCommentCount" />
+
+                <View
+                    android:id="@+id/view12"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginVertical="3dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/gray_main"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgComment"
+                    app:layout_constraintStart_toEndOf="@+id/view11"
+                    app:layout_constraintTop_toTopOf="@+id/imgComment" />
+
+                <ImageView
+                    android:id="@+id/imgShare"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/share_desc"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgComment"
+                    app:layout_constraintStart_toEndOf="@+id/view12"
+                    app:layout_constraintTop_toTopOf="@+id/imgComment"
+                    app:srcCompat="@drawable/ic_share" />
+
+                <View
+                    android:id="@+id/view13"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginVertical="3dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/gray_main"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgShare"
+                    app:layout_constraintStart_toEndOf="@+id/imgShare"
+                    app:layout_constraintTop_toTopOf="@+id/imgShare" />
+
+                <ImageView
+                    android:id="@+id/imgFavorite"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/favorite_desc"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgShare"
+                    app:layout_constraintStart_toEndOf="@+id/view13"
+                    app:layout_constraintTop_toTopOf="@+id/imgShare"
+                    app:srcCompat="@drawable/ic_favorite" />
+
+                <View
+                    android:id="@+id/view14"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginVertical="3dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/gray_main"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgShare"
+                    app:layout_constraintStart_toEndOf="@+id/imgFavorite"
+                    app:layout_constraintTop_toTopOf="@+id/imgShare" />
+
+                <ImageView
+                    android:id="@+id/imgStar"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/star_desc"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgShare"
+                    app:layout_constraintStart_toEndOf="@+id/view14"
+                    app:layout_constraintTop_toTopOf="@+id/imgShare"
+                    app:srcCompat="@drawable/ic_star" />
+
+                <TextView
+                    android:id="@+id/txtRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="@dimen/text_small_size"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgStar"
+                    app:layout_constraintStart_toEndOf="@+id/imgStar"
+                    app:layout_constraintTop_toTopOf="@+id/imgStar"
+                    app:layout_constraintVertical_bias="1.0"
+                    tools:text="4.5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="60dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewPagerSlider">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/specifications"
+                            android:textColor="@color/color_text_black"
+                            android:textSize="@dimen/heading_large_size"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="8dp"
+                            android:contentDescription="@string/f_logo_desc"
+                            app:srcCompat="@drawable/ic_f" />
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/back_item_recycler_main">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerSpecifications"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:itemCount="4" tools:listitem="@layout/recycler_item_list_mobile_specifications" />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/general_description"
+                            android:textColor="@color/color_text_black"
+                            android:textSize="@dimen/heading_large_size"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="8dp"
+                            android:contentDescription="@string/f_logo_desc"
+                            app:srcCompat="@drawable/ic_f" />
+
+                    </LinearLayout>
+
+                    <com.codesgood.views.JustifiedTextView
+                        android:id="@+id/txtDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/text_normal_size"
+                        tools:text="@string/lorem"
+                        tools:ignore="VisualLintLongText" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/send_comment"
+                            android:textColor="@color/color_text_black"
+                            android:textSize="@dimen/heading_large_size"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="8dp"
+                            android:contentDescription="@string/f_logo_desc"
+                            app:srcCompat="@drawable/ic_f" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtComment"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/back_edit_text"
+                        android:gravity="start|top"
+                        android:hint="@string/comment_hint"
+                        android:inputType="textMultiLine"
+                        android:layoutDirection="rtl"
+                        android:padding="8dp"
+                        android:textColor="@color/color_text_black"
+                        android:textColorHint="@color/color_text_gray"
+                        android:textSize="@dimen/text_normal_size"
+                        tools:ignore="VisualLintTextFieldSize" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal">
+
+                        <ir.hamedmahmoodi.mobileshop.ui.customView.CustomButton
+                            android:id="@+id/btnSendComment"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            app:buttonText="ثبت نظر" />
+
+         <RatingBar
+             android:id="@+id/ratingComment"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_vertical"
+             android:clickable="true"
+             android:isIndicator="true"
+             android:numStars="5"
+             android:rating="4.5"
+             android:padding="4dp"
+             android:stepSize="0.5"
+             android:focusable="true" />
+
+                        <!--TODO fix rating bar-->
+                       <!-- <com.willy.ratingbar.ScaleRatingBar
+                            android:id="@+id/ratingComment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            app:srb_clearRatingEnabled="true"
+                            app:srb_clickable="true"
+                            app:srb_isIndicator="false"
+                            app:srb_minimumStars="1"
+                            app:srb_numStars="5"
+                            app:srb_rating="4.5"
+                            app:srb_scrollable="true"
+                            app:srb_starHeight="22dp"
+                            app:srb_starPadding="4dp"
+                            app:srb_starWidth="22dp"
+                            app:srb_stepSize="0.5" />-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/users_comment"
+                            android:textColor="@color/color_text_black"
+                            android:textSize="@dimen/heading_large_size"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="8dp"
+                            android:contentDescription="@string/f_logo_desc"
+                            app:srcCompat="@drawable/ic_f" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerComments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/viewBottom"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/white_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view21"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@drawable/back_view_bottom_detail"
+        app:layout_constraintBottom_toTopOf="@id/viewBottom"
+        app:layout_constraintEnd_toEndOf="@id/viewBottom"
+        app:layout_constraintStart_toStartOf="@id/viewBottom" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/toman"
+        android:textColor="@color/color_text_black"
+        android:textSize="@dimen/text_normal_size"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewBottom" />
+
+    <TextView
+        android:id="@+id/txtMainPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/color_text_black"
+        android:textSize="@dimen/text_large_size"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout2"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/viewBottom"
+        tools:text="430,000" />
+
+    <TextView
+        android:id="@+id/txtOffPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/color_text_black"
+        android:textSize="@dimen/text_large_size"
+        app:layout_constraintBottom_toBottomOf="@+id/txtMainPrice"
+        app:layout_constraintStart_toEndOf="@+id/txtMainPrice"
+        app:layout_constraintTop_toTopOf="@+id/txtMainPrice"
+        tools:text="380,000" />
+
+    <View
+        android:id="@+id/view22"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:background="@drawable/back_shopping_detail_off"
+        app:layout_constraintBottom_toTopOf="@+id/txtMainPrice"
+        app:layout_constraintEnd_toEndOf="@+id/txtMainPrice"
+        app:layout_constraintTop_toTopOf="@+id/txtMainPrice" />
+
+    <TextView
+        android:id="@+id/txtOffCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_main"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view22"
+        app:layout_constraintEnd_toEndOf="@+id/view22"
+        app:layout_constraintStart_toStartOf="@+id/view22"
+        app:layout_constraintTop_toTopOf="@+id/view22"
+        tools:text="55%" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="view22,txtOffPrice,txtOffCount" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/bottomViews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="btnShop,txtMainPrice,textView6,view21,viewBottom" />
+
+    <ir.hamedmahmoodi.mobileshop.ui.customView.CustomButton
+        android:id="@+id/btnShop"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:paddingHorizontal="8dp"
+        app:buttonText="@string/add_to_cart"
+        app:layout_constraintBottom_toBottomOf="@id/viewBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewBottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

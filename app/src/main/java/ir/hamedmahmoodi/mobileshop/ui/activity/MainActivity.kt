@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import ir.hamedmahmoodi.mobileshop.R
+import ir.hamedmahmoodi.mobileshop.adapter.viewPager.CustomSliderPagerAdapter
 import ir.hamedmahmoodi.mobileshop.androidWrapper.ActivityUtils
 import ir.hamedmahmoodi.mobileshop.mvp.model.ModelMainActivity
 import ir.hamedmahmoodi.mobileshop.mvp.pressenter.PresenterMainActivity
@@ -32,12 +33,12 @@ class MainActivity : AppCompatActivity(), ActivityUtils {
             .commit()
 
     }
-//TODO fun fun setViewPagerFragment
-    /*override fun setViewPagerFragment(viewPager: ViewPager2, data: ArrayList<String>) {
+
+    override fun setViewPagerFragment(viewPager: ViewPager2, data: ArrayList<String>) {
 
         viewPager.adapter =
             CustomSliderPagerAdapter(supportFragmentManager, lifecycle, data)
 
-    }*/
+    }
 
 }

@@ -7,8 +7,7 @@ interface ActivityUtils {
 
     fun setFragment(fragment: Fragment) {}
 
-    //TODO setViewPagerFragment
-    /*fun setViewPagerFragment(viewPager: ViewPager2, data: ArrayList<String>) {}*/
+    fun setViewPagerFragment(viewPager: ViewPager2, data: ArrayList<String>) {}
 
     fun finished() {}
 
