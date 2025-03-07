@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.WindowManager
-import ir.hamedmahmoodi.mobileshop.R
 import ir.hamedmahmoodi.mobileshop.androidWrapper.ActivityUtils
 import ir.hamedmahmoodi.mobileshop.data.local.preferences.SecureSharePref
 import ir.hamedmahmoodi.mobileshop.data.local.preferences.SharedPrefKey

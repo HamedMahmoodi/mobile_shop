@@ -1,12 +1,12 @@
 package ir.hamedmahmoodi.mobileshop.mvp.model
 
-import ir.hamedmahmoodi.mobileshop.data.remote.apiRepository.MobileApiRepository
+import ir.hamedmahmoodi.mobileshop.data.remote.apiRepository.ProductApiRepository
 import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.DefaultModel
-import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.MobileMainModel
+import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.ProductMainModel
 import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.RequestFavorite
 import ir.hamedmahmoodi.mobileshop.data.remote.ext.CallbackRequest
 
-class ModelDetailMobileActivity(private val id: Int) {
+class ModelDetailProductActivity(private val id: Int) {
 
     companion object {
 
@@ -15,30 +15,30 @@ class ModelDetailMobileActivity(private val id: Int) {
 
     }
 
-    fun getDetailMobile(
-        callbackRequest: CallbackRequest<MobileMainModel>,
+    fun getDetailProduct(
+        callbackRequest: CallbackRequest<ProductMainModel>,
         uId: String,
         pubKey: String,
         apiKey: String
     ) {
-        MobileApiRepository.instance.getMobileDetail(
+        ProductApiRepository.instance.getProductDetail(
             callbackRequest, id, apiKey, uId, pubKey
         )
     }
 
-    fun setMobileFavorite(
+    fun setProductFavorite(
         callbackRequest: CallbackRequest<RequestFavorite>,
         apiKey: String,
         uId: String,
         pubKey: String,
         action: String
     ) {
-        MobileApiRepository.instance.setMobileFavorite(
+        ProductApiRepository.instance.setProductFavorite(
             callbackRequest, apiKey, uId, pubKey, action, id
         )
     }
 
-    fun setMobileComment(
+    fun setProductComment(
         apiKey: String,
         uId: String,
         pubKey: String,
@@ -47,7 +47,7 @@ class ModelDetailMobileActivity(private val id: Int) {
         rate: Float,
         callbackRequest: CallbackRequest<DefaultModel>
     ) {
-        MobileApiRepository.instance.setMobileComments(
+        ProductApiRepository.instance.setProductComments(
             apiKey, uId, pubKey, postId, content, rate, callbackRequest
         )
     }

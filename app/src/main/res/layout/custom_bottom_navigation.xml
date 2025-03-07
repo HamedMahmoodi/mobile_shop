@@ -33,10 +33,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/phone" />
+        app:layout_constraintStart_toEndOf="@+id/mobile" />
 
     <View
-        android:id="@+id/phone"
+        android:id="@+id/mobile"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="8dp"
@@ -50,14 +50,14 @@
         android:id="@+id/view3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/phone"
-        app:layout_constraintEnd_toStartOf="@+id/phone"
+        app:layout_constraintBottom_toBottomOf="@+id/mobile"
+        app:layout_constraintEnd_toStartOf="@+id/mobile"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/mobile"
-        app:layout_constraintTop_toTopOf="@+id/phone" />
+        app:layout_constraintStart_toEndOf="@+id/product"
+        app:layout_constraintTop_toTopOf="@+id/mobile" />
 
     <View
-        android:id="@+id/mobile"
+        android:id="@+id/product"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="8dp"
@@ -72,12 +72,12 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/mobile"
-        app:layout_constraintEnd_toStartOf="@+id/mobile"
+        app:layout_constraintBottom_toBottomOf="@+id/product"
+        app:layout_constraintEnd_toStartOf="@+id/product"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/mobile" />
+        app:layout_constraintTop_toTopOf="@+id/product" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -95,10 +95,10 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:contentDescription="@string/image_shop_desc"
-        app:layout_constraintBottom_toBottomOf="@+id/phone"
-        app:layout_constraintEnd_toEndOf="@+id/phone"
-        app:layout_constraintStart_toStartOf="@+id/phone"
-        app:layout_constraintTop_toTopOf="@+id/phone"
+        app:layout_constraintBottom_toBottomOf="@+id/mobile"
+        app:layout_constraintEnd_toEndOf="@+id/mobile"
+        app:layout_constraintStart_toStartOf="@+id/mobile"
+        app:layout_constraintTop_toTopOf="@+id/mobile"
         app:srcCompat="@drawable/ic_shop" />
 
     <ImageView
@@ -106,10 +106,10 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:contentDescription="@string/image_mobile_desc"
-        app:layout_constraintBottom_toBottomOf="@+id/mobile"
-        app:layout_constraintEnd_toEndOf="@+id/mobile"
-        app:layout_constraintStart_toStartOf="@+id/mobile"
-        app:layout_constraintTop_toTopOf="@+id/mobile"
+        app:layout_constraintBottom_toBottomOf="@+id/product"
+        app:layout_constraintEnd_toEndOf="@+id/product"
+        app:layout_constraintStart_toStartOf="@+id/product"
+        app:layout_constraintTop_toTopOf="@+id/product"
         app:srcCompat="@drawable/ic_phone" />
 
     <ImageView
@@ -131,7 +131,7 @@
         android:layout_marginEnd="8dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintEnd_toStartOf="@+id/phone"
+        app:layout_constraintEnd_toStartOf="@+id/mobile"
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/imageView3"
         app:srcCompat="@drawable/ic_polygon" />

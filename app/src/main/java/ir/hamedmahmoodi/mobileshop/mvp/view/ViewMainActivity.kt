@@ -39,10 +39,10 @@ class ViewMainActivity : FrameLayout, ActiveFragment {
             FragmentType.PROFILE -> ProfileFragment(context)
 
             //TODO CakeCatsFragment
-                FragmentType.Phone ->HomeFragment(context, activityUtils) /*CakeCatsFragment(context)*/
+                FragmentType.Mobile ->HomeFragment(context, activityUtils) /*CakeCatsFragment(context)*/
 
             //TODO PastryCatsFragment
-                FragmentType.Mobile -> HomeFragment(context, activityUtils) /*PastryCatsFragment(context)*/
+                FragmentType.Product -> HomeFragment(context, activityUtils) /*PastryCatsFragment(context)*/
 
             //TODO SHOPPINGCARTFragment
             FragmentType.SHOPPINGCART ->HomeFragment(context, activityUtils) /*ShoppingCartFragment(context)*/

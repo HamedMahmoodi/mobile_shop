@@ -1,7 +1,7 @@
 package ir.hamedmahmoodi.mobileshop.ui.customView.bottomNav
 
 enum class FragmentType {
-    HOME, Phone, Mobile, PROFILE, SHOPPINGCART
+    HOME, Mobile, Product, PROFILE, SHOPPINGCART
 }
 
 interface ActiveFragment {

@@ -2,12 +2,12 @@ package ir.hamedmahmoodi.mobileshop.data.remote.dataModel
 
 import com.google.gson.annotations.SerializedName
 
-data class MobileMainModel(
+data class ProductMainModel(
     val message: String,
-    @SerializedName("pastry") val mobile: MobileDetailModel
+    @SerializedName("pastry") val product: ProductDetailModel
 )
 
-data class MobileDetailModel(
+data class ProductDetailModel(
     @SerializedName("ID") val id: Int,
     val title: String,
     val content: String,

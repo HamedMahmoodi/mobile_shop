@@ -1,7 +1,7 @@
 package ir.hamedmahmoodi.mobileshop.data.remote.apiRepository
 
 import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.DefaultModel
-import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.MobileMainModel
+import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.ProductMainModel
 import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.RequestFavorite
 import ir.hamedmahmoodi.mobileshop.data.remote.ext.CallbackRequest
 import ir.hamedmahmoodi.mobileshop.data.remote.ext.ErrorUtils
@@ -16,44 +16,44 @@ import retrofit2.http.Header
 import retrofit2.http.POST
 import retrofit2.http.Path
 
-class MobileApiRepository private constructor() {
+class ProductApiRepository private constructor() {
 
     companion object {
 
-        private var apiRepository: MobileApiRepository? = null
+        private var apiRepository: ProductApiRepository? = null
 
-        val instance: MobileApiRepository
+        val instance: ProductApiRepository
             get() {
-                if (apiRepository == null) apiRepository = MobileApiRepository()
+                if (apiRepository == null) apiRepository = ProductApiRepository()
                 return apiRepository!!
             }
 
     }
 
-    fun getMobileDetail(
-        callbackRequest: CallbackRequest<MobileMainModel>,
+    fun getProductDetail(
+        callbackRequest: CallbackRequest<ProductMainModel>,
         id: Int,
         apiKey: String,
         uId: String,
         pubKey: String,
     ) {
 
-        RetrofitService.mobileApiService.getMobile(
+        RetrofitService.productApiService.getProduct(
             id,
             uId,
             pubKey,
             apiKey
         ).enqueue(
 
-            object : Callback<MobileMainModel> {
+            object : Callback<ProductMainModel> {
 
                 override fun onResponse(
-                    call: Call<MobileMainModel>,
-                    response: Response<MobileMainModel>
+                    call: Call<ProductMainModel>,
+                    response: Response<ProductMainModel>
                 ) {
 
                     if (response.isSuccessful) {
-                        val data = response.body() as MobileMainModel
+                        val data = response.body() as ProductMainModel
                         callbackRequest.onSuccess(
                             response.code(),
                             data
@@ -68,7 +68,7 @@ class MobileApiRepository private constructor() {
 
                 }
 
-                override fun onFailure(call: Call<MobileMainModel>, t: Throwable) {
+                override fun onFailure(call: Call<ProductMainModel>, t: Throwable) {
 
                     callbackRequest.onError(t.message.toString())
 
@@ -80,7 +80,7 @@ class MobileApiRepository private constructor() {
 
     }
 
-    fun setMobileFavorite(
+    fun setProductFavorite(
         callbackRequest: CallbackRequest<RequestFavorite>,
         apiKey: String,
         uId: String,
@@ -89,7 +89,7 @@ class MobileApiRepository private constructor() {
         id: Int
     ) {
 
-        RetrofitService.mobileApiService.setMobileFavorite(id, apiKey, uId, pubKey, action).enqueue(
+        RetrofitService.productApiService.setProductFavorite(id, apiKey, uId, pubKey, action).enqueue(
 
             object : Callback<RequestFavorite> {
 
@@ -126,7 +126,7 @@ class MobileApiRepository private constructor() {
 
     }
 
-    fun setMobileComments(
+    fun setProductComments(
         apiKey: String,
         uId: String,
         pubKey: String,
@@ -136,7 +136,7 @@ class MobileApiRepository private constructor() {
         callbackRequest: CallbackRequest<DefaultModel>
     ) {
 
-        RetrofitService.mobileApiService.setMobileComment(
+        RetrofitService.productApiService.setProductComment(
             apiKey, uId, pubKey, postId, content, rate
         ).enqueue(
 
@@ -177,19 +177,19 @@ class MobileApiRepository private constructor() {
 
 }
 
-interface MobileApiService {
+interface ProductApiService {
 
     @GET("pastry/{id}")
-    fun getMobile(
+    fun getProduct(
         @Path(value = "id", encoded = false) ID: Int,
         @Header("app-device-uid") uId: String,
         @Header("app-public-key") pubKey: String,
         @Header("app-api-key") apiKey: String
-    ): Call<MobileMainModel>
+    ): Call<ProductMainModel>
 
     @FormUrlEncoded
     @POST("pastry/{id}/operations/")
-    fun setMobileFavorite(
+    fun setProductFavorite(
         @Path(value = "id", encoded = false) pastryId: Int,
         @Header("app-api-key") apiKey: String,
         @Header("app-device-uid") id: String,
@@ -199,7 +199,7 @@ interface MobileApiService {
 
     @FormUrlEncoded
     @POST("comment/")
-    fun setMobileComment(
+    fun setProductComment(
         @Header("app-api-key") apiKey: String,
         @Header("app-device-uid") id: String,
         @Header("app-public-key") pubKey: String,

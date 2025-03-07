@@ -2,7 +2,6 @@ package ir.hamedmahmoodi.mobileshop.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import ir.hamedmahmoodi.mobileshop.R
 import ir.hamedmahmoodi.mobileshop.androidWrapper.ActivityUtils
 import ir.hamedmahmoodi.mobileshop.mvp.model.ModelAddressActivity
 import ir.hamedmahmoodi.mobileshop.mvp.pressenter.PresenterAddressActivity

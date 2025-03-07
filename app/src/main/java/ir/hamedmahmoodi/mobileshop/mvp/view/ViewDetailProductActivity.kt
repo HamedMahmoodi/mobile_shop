@@ -17,14 +17,14 @@ import ir.hamedmahmoodi.mobileshop.adapter.recycler.SpecificationsRecyclerAdapte
 import ir.hamedmahmoodi.mobileshop.androidWrapper.ActivityUtils
 import ir.hamedmahmoodi.mobileshop.androidWrapper.DeviceInfo
 import ir.hamedmahmoodi.mobileshop.data.remote.apiRepository.SendRequests
-import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.MobileDetailModel
+import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.ProductDetailModel
 import ir.hamedmahmoodi.mobileshop.data.remote.ext.OthersUtilities
-import ir.hamedmahmoodi.mobileshop.databinding.ActivityDetailMobileBinding
+import ir.hamedmahmoodi.mobileshop.databinding.ActivityDetailProductBinding
 import ir.hamedmahmoodi.mobileshop.databinding.CustomDialogSellBinding
 import ir.hamedmahmoodi.mobileshop.mvp.ext.ToastUtils
-import ir.hamedmahmoodi.mobileshop.mvp.model.ModelDetailMobileActivity
+import ir.hamedmahmoodi.mobileshop.mvp.model.ModelDetailProductActivity
 
-class ViewDetailMobileActivity : FrameLayout {
+class ViewDetailProductActivity : FrameLayout {
 
     private lateinit var actUtils: ActivityUtils
 
@@ -37,10 +37,10 @@ class ViewDetailMobileActivity : FrameLayout {
         actUtils = activityUtils
     }
 
-    val binding = ActivityDetailMobileBinding.inflate(LayoutInflater.from(context))
+    val binding = ActivityDetailProductBinding.inflate(LayoutInflater.from(context))
 
     @SuppressLint("SetTextI18n")
-    fun setData(detail: MobileDetailModel, sendRequests: SendRequests) {
+    fun setData(detail: ProductDetailModel, sendRequests: SendRequests) {
 
         binding.viewPagerSlider.layoutDirection = View.LAYOUT_DIRECTION_RTL
         actUtils.setViewPagerFragment(binding.viewPagerSlider, detail.gallery)
@@ -72,11 +72,11 @@ class ViewDetailMobileActivity : FrameLayout {
             var action = ""
 
             if (bookmark) {
-                action = ModelDetailMobileActivity.ACTION_UN_FAVORITE
+                action = ModelDetailProductActivity.ACTION_UN_FAVORITE
                 binding.imgFavorite.setImageResource(R.drawable.ic_favorite)
                 bookmark = false
             } else {
-                action = ModelDetailMobileActivity.ACTION_FAVORITE
+                action = ModelDetailProductActivity.ACTION_FAVORITE
                 binding.imgFavorite.setImageResource(R.drawable.ic_actived_favorite)
                 bookmark = true
             }
@@ -244,7 +244,7 @@ class ViewDetailMobileActivity : FrameLayout {
 
     }
 
-    private fun setPriceWithCount(view: CustomDialogSellBinding, detail: MobileDetailModel) {
+    private fun setPriceWithCount(view: CustomDialogSellBinding, detail: ProductDetailModel) {
 
         val count = view.txtCount.text.toString().toInt()
         var salePrice = 0

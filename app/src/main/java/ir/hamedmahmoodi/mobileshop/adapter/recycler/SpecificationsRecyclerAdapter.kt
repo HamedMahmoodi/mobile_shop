@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ir.hamedmahmoodi.mobileshop.R
 import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.Specifications
-import ir.hamedmahmoodi.mobileshop.databinding.RecyclerItemListMobileSpecificationsBinding
+import ir.hamedmahmoodi.mobileshop.databinding.RecyclerItemListProductSpecificationsBinding
 
 class SpecificationsRecyclerAdapter(
     private val specifications: ArrayList<Specifications>
@@ -15,7 +15,7 @@ class SpecificationsRecyclerAdapter(
         parent: ViewGroup,
         viewType: Int
     ) = SpecificationsViewHolder(
-        RecyclerItemListMobileSpecificationsBinding.inflate(
+        RecyclerItemListProductSpecificationsBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false
@@ -29,7 +29,7 @@ class SpecificationsRecyclerAdapter(
     }
 
     inner class SpecificationsViewHolder(
-        private val binding: RecyclerItemListMobileSpecificationsBinding
+        private val binding: RecyclerItemListProductSpecificationsBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun setData(data: Specifications) {

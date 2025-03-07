@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white_color200"
     android:layoutDirection="ltr"
-    tools:context=".ui.activity.DetailMobileActivity">
+    tools:context=".ui.activity.DetailProductActivity">
 
     <ir.hamedmahmoodi.mobileshop.ui.customView.CustomAppBar
         android:id="@+id/customAppBar"
@@ -237,7 +237,7 @@
                             android:id="@+id/recyclerSpecifications"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            tools:itemCount="4" tools:listitem="@layout/recycler_item_list_mobile_specifications" />
+                            tools:itemCount="4" tools:listitem="@layout/recycler_item_list_product_specifications" />
 
                     </FrameLayout>
 

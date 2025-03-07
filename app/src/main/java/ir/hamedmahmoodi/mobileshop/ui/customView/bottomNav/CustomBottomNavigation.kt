@@ -29,14 +29,14 @@ class CustomBottomNavigation(
             activeFragment.setFragment(FragmentType.HOME)
         }
 
-        binding.phone.setOnClickListener {
-            activePhone()
-            activeFragment.setFragment(FragmentType.Phone)
-        }
-
         binding.mobile.setOnClickListener {
             activeMobile()
             activeFragment.setFragment(FragmentType.Mobile)
+        }
+
+        binding.product.setOnClickListener {
+            activeProduct()
+            activeFragment.setFragment(FragmentType.Product)
         }
 
         binding.profile.setOnClickListener {
@@ -54,18 +54,8 @@ class CustomBottomNavigation(
     private fun activeHome() {
 
         binding.homes.setBackgroundResource(R.drawable.back_item_bottom_nav)
-        binding.phone.background = null
         binding.mobile.background = null
-        binding.profile.background = null
-        binding.shoppingCart.background = null
-
-    }
-
-    private fun activePhone() {
-
-        binding.phone.setBackgroundResource(R.drawable.back_item_bottom_nav)
-        binding.homes.background = null
-        binding.mobile.background = null
+        binding.product.background = null
         binding.profile.background = null
         binding.shoppingCart.background = null
 
@@ -75,7 +65,17 @@ class CustomBottomNavigation(
 
         binding.mobile.setBackgroundResource(R.drawable.back_item_bottom_nav)
         binding.homes.background = null
-        binding.phone.background = null
+        binding.product.background = null
+        binding.profile.background = null
+        binding.shoppingCart.background = null
+
+    }
+
+    private fun activeProduct() {
+
+        binding.product.setBackgroundResource(R.drawable.back_item_bottom_nav)
+        binding.homes.background = null
+        binding.mobile.background = null
         binding.profile.background = null
         binding.shoppingCart.background = null
 
@@ -85,8 +85,8 @@ class CustomBottomNavigation(
 
         binding.profile.setBackgroundResource(R.drawable.back_item_bottom_nav)
         binding.homes.background = null
-        binding.phone.background = null
         binding.mobile.background = null
+        binding.product.background = null
         binding.shoppingCart.background = null
 
     }
@@ -95,8 +95,8 @@ class CustomBottomNavigation(
 
         binding.shoppingCart.setBackgroundResource(R.drawable.back_item_bottom_nav)
         binding.homes.background = null
-        binding.phone.background = null
         binding.mobile.background = null
+        binding.product.background = null
         binding.profile.background = null
 
     }

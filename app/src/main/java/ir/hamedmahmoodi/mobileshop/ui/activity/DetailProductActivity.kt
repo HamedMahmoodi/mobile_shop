@@ -5,11 +5,11 @@ import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
 import ir.hamedmahmoodi.mobileshop.adapter.viewPager.CustomSliderPagerAdapter
 import ir.hamedmahmoodi.mobileshop.androidWrapper.ActivityUtils
-import ir.hamedmahmoodi.mobileshop.mvp.model.ModelDetailMobileActivity
-import ir.hamedmahmoodi.mobileshop.mvp.pressenter.PresenterDetailMobileActivity
-import ir.hamedmahmoodi.mobileshop.mvp.view.ViewDetailMobileActivity
+import ir.hamedmahmoodi.mobileshop.mvp.model.ModelDetailProductActivity
+import ir.hamedmahmoodi.mobileshop.mvp.pressenter.PresenterDetailProductActivity
+import ir.hamedmahmoodi.mobileshop.mvp.view.ViewDetailProductActivity
 
-class DetailMobileActivity : AppCompatActivity(), ActivityUtils {
+class DetailProductActivity : AppCompatActivity(), ActivityUtils {
 
     companion object {
         const val ID = "ID"
@@ -17,12 +17,12 @@ class DetailMobileActivity : AppCompatActivity(), ActivityUtils {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val view = ViewDetailMobileActivity(this, this)
+        val view = ViewDetailProductActivity(this, this)
         setContentView(view.binding.root)
 
         val id = intent.getIntExtra(ID, 0)
 
-        val presenter = PresenterDetailMobileActivity(view, ModelDetailMobileActivity(id), this)
+        val presenter = PresenterDetailProductActivity(view, ModelDetailProductActivity(id), this)
         presenter.onCreate()
 
 

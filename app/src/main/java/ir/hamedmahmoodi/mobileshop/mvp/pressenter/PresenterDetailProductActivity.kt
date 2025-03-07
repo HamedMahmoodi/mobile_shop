@@ -6,17 +6,17 @@ import ir.hamedmahmoodi.mobileshop.androidWrapper.DeviceInfo
 import ir.hamedmahmoodi.mobileshop.androidWrapper.NetworkInfo
 import ir.hamedmahmoodi.mobileshop.data.remote.apiRepository.SendRequests
 import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.DefaultModel
-import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.MobileMainModel
+import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.ProductMainModel
 import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.RequestFavorite
 import ir.hamedmahmoodi.mobileshop.data.remote.ext.CallbackRequest
 import ir.hamedmahmoodi.mobileshop.mvp.ext.BaseLifeCycle
 import ir.hamedmahmoodi.mobileshop.mvp.ext.ToastUtils
-import ir.hamedmahmoodi.mobileshop.mvp.model.ModelDetailMobileActivity
-import ir.hamedmahmoodi.mobileshop.mvp.view.ViewDetailMobileActivity
+import ir.hamedmahmoodi.mobileshop.mvp.model.ModelDetailProductActivity
+import ir.hamedmahmoodi.mobileshop.mvp.view.ViewDetailProductActivity
 
-class PresenterDetailMobileActivity(
-    private val view: ViewDetailMobileActivity,
-    private val model: ModelDetailMobileActivity,
+class PresenterDetailProductActivity(
+    private val view: ViewDetailProductActivity,
+    private val model: ModelDetailProductActivity,
     private val context: Context
 ) : BaseLifeCycle, ActivityUtils, SendRequests {
 
@@ -27,22 +27,22 @@ class PresenterDetailMobileActivity(
         view.onBack()
 
         if (NetworkInfo.internetInfo(context, this))
-            getDataMobile()
+            getDataProduct()
 
     }
 
     override fun activeNetwork() {
-        getDataMobile()
+        getDataProduct()
     }
 
-    private fun getDataMobile() {
+    private fun getDataProduct() {
 
         val result =
-            object : CallbackRequest<MobileMainModel> {
+            object : CallbackRequest<ProductMainModel> {
 
-                override fun onSuccess(code: Int, data: MobileMainModel) {
+                override fun onSuccess(code: Int, data: ProductMainModel) {
                     view.endGetData()
-                    view.setData(data.mobile, this@PresenterDetailMobileActivity)
+                    view.setData(data.product, this@PresenterDetailProductActivity)
                 }
 
                 override fun onNotSuccess(code: Int, error: String) {
@@ -57,7 +57,7 @@ class PresenterDetailMobileActivity(
 
             }
 
-        model.getDetailMobile(
+        model.getDetailProduct(
 
             result,
             DeviceInfo.getDeviceID(context),
@@ -91,7 +91,7 @@ class PresenterDetailMobileActivity(
 
         }
 
-        model.setMobileFavorite(
+        model.setProductFavorite(
             result,
             apiKey,
             uId,
@@ -110,7 +110,7 @@ class PresenterDetailMobileActivity(
         postId: Int
     ) {
 
-        model.setMobileComment(
+        model.setProductComment(
             apiKey, uId, pubKey, postId, content, rate,
 
             object : CallbackRequest<DefaultModel> {
