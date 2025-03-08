@@ -84,4 +84,7 @@
     <string name="price_total">مبلغ نهایی :</string>
     <string name="continue_sell">ادامه فرآیند ثبت سفارش</string>
     <string name="slider_desc">slider</string>
+    <string name="main_image_desc">main_image</string>
+    <string name="off_desc">off</string>
+    <string name="search_desc">search_desc</string>
 </resources>

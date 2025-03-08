@@ -4,6 +4,7 @@ import ir.hamedmahmoodi.mobileshop.data.remote.apiRepository.AddressApiService
 import ir.hamedmahmoodi.mobileshop.data.remote.apiRepository.LoginApiService
 import ir.hamedmahmoodi.mobileshop.data.remote.apiRepository.MainApiService
 import ir.hamedmahmoodi.mobileshop.data.remote.apiRepository.ProductApiService
+import ir.hamedmahmoodi.mobileshop.data.remote.apiRepository.ProductListApiService
 import ir.hamedmahmoodi.mobileshop.data.remote.apiRepository.UserApiService
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -31,10 +32,10 @@ object RetrofitService {
     val mainApiService: MainApiService = retrofit.create(MainApiService::class.java)
     val addressApiService: AddressApiService = retrofit.create(AddressApiService::class.java)
     val productApiService: ProductApiService = retrofit.create(ProductApiService::class.java)
+    val productsListApiService: ProductListApiService = retrofit.create(ProductListApiService::class.java)
   /*
     val catsApiService: CatsApiService = retrofit.create(CatsApiService::class.java)
     val cakeApiService: CakeApiService = retrofit.create(CakeApiService::class.java)
-    val pastriesListApiService: PastryListApiService =
-        retrofit.create(PastryListApiService::class.java)*/
+    */
 
 }
