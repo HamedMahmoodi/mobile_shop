@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.WindowManager
 import androidx.activity.OnBackPressedCallback
 import ir.hamedmahmoodi.mobileshop.mvp.model.ModelLoginActivity
-import ir.hamedmahmoodi.mobileshop.mvp.pressenter.PresenterLoginActivity
+import ir.hamedmahmoodi.mobileshop.mvp.presenter.PresenterLoginActivity
 import ir.hamedmahmoodi.mobileshop.mvp.view.ViewLoginActivity
 
 class LoginActivity : AppCompatActivity() {

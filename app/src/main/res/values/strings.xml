@@ -87,4 +87,6 @@
     <string name="main_image_desc">main_image</string>
     <string name="off_desc">off</string>
     <string name="search_desc">search_desc</string>
+    <string name="favorite">علاقه مندی ها</string>
+    <string name="not_favorite">محصولی وجود ندارد</string>
 </resources>

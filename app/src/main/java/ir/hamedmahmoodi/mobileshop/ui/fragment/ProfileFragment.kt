@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import ir.hamedmahmoodi.mobileshop.mvp.model.ModelProfileFragment
-import ir.hamedmahmoodi.mobileshop.mvp.pressenter.PresenterProfileFragment
+import ir.hamedmahmoodi.mobileshop.mvp.presenter.PresenterProfileFragment
 import ir.hamedmahmoodi.mobileshop.mvp.view.ViewProfileFragment
 
 class ProfileFragment(private val mContext: Context) : Fragment() {

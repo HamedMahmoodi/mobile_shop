@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import ir.hamedmahmoodi.mobileshop.androidWrapper.ActivityUtils
 import ir.hamedmahmoodi.mobileshop.mvp.model.ModelHomeFragment
-import ir.hamedmahmoodi.mobileshop.mvp.pressenter.PresenterHomeFragment
+import ir.hamedmahmoodi.mobileshop.mvp.presenter.PresenterHomeFragment
 import ir.hamedmahmoodi.mobileshop.mvp.view.ViewHomeFragment
 
 class HomeFragment(

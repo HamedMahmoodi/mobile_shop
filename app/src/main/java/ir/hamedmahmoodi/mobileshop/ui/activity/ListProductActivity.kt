@@ -2,10 +2,9 @@ package ir.hamedmahmoodi.mobileshop.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import ir.hamedmahmoodi.mobileshop.R
 import ir.hamedmahmoodi.mobileshop.androidWrapper.ActivityUtils
 import ir.hamedmahmoodi.mobileshop.mvp.model.ModelListProductActivity
-import ir.hamedmahmoodi.mobileshop.mvp.pressenter.PresenterListProductActivity
+import ir.hamedmahmoodi.mobileshop.mvp.presenter.PresenterListProductActivity
 import ir.hamedmahmoodi.mobileshop.mvp.view.ViewListProductActivity
 
 class ListProductActivity : AppCompatActivity(), ActivityUtils {

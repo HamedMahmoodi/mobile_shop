@@ -8,6 +8,7 @@ import android.widget.FrameLayout
 import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.UserData
 import ir.hamedmahmoodi.mobileshop.databinding.FragmentProfileBinding
 import ir.hamedmahmoodi.mobileshop.ui.activity.AddressActivity
+import ir.hamedmahmoodi.mobileshop.ui.activity.FavoriteActivity
 import ir.hamedmahmoodi.mobileshop.ui.activity.UserActivity
 
 class ViewProfileFragment(
@@ -44,10 +45,9 @@ class ViewProfileFragment(
             context.startActivity(Intent(context, UserActivity::class.java))
         }
 
-    /*    //TODO FavoriteActivity
         binding.imgFavorite.setOnClickListener {
             context.startActivity(Intent(context, FavoriteActivity::class.java))
-        }*/
+        }
 
         binding.imgAddress.setOnClickListener {
             context.startActivity(Intent(context, AddressActivity::class.java))

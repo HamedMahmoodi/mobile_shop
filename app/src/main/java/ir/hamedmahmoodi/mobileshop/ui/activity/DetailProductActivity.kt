@@ -6,7 +6,7 @@ import androidx.viewpager2.widget.ViewPager2
 import ir.hamedmahmoodi.mobileshop.adapter.viewPager.CustomSliderPagerAdapter
 import ir.hamedmahmoodi.mobileshop.androidWrapper.ActivityUtils
 import ir.hamedmahmoodi.mobileshop.mvp.model.ModelDetailProductActivity
-import ir.hamedmahmoodi.mobileshop.mvp.pressenter.PresenterDetailProductActivity
+import ir.hamedmahmoodi.mobileshop.mvp.presenter.PresenterDetailProductActivity
 import ir.hamedmahmoodi.mobileshop.mvp.view.ViewDetailProductActivity
 
 class DetailProductActivity : AppCompatActivity(), ActivityUtils {

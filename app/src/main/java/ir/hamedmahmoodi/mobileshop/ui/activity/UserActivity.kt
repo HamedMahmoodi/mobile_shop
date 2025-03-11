@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import ir.hamedmahmoodi.mobileshop.androidWrapper.ActivityUtils
 import ir.hamedmahmoodi.mobileshop.mvp.model.ModelUserActivity
-import ir.hamedmahmoodi.mobileshop.mvp.pressenter.PresenterUserActivity
+import ir.hamedmahmoodi.mobileshop.mvp.presenter.PresenterUserActivity
 import ir.hamedmahmoodi.mobileshop.mvp.view.ViewUserActivity
 
 class UserActivity : AppCompatActivity(), ActivityUtils {

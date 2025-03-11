@@ -1,4 +1,4 @@
-package ir.hamedmahmoodi.mobileshop.mvp.pressenter
+package ir.hamedmahmoodi.mobileshop.mvp.presenter
 
 import ir.hamedmahmoodi.mobileshop.mvp.ext.BaseLifeCycle
 import ir.hamedmahmoodi.mobileshop.mvp.model.ModelMainActivity

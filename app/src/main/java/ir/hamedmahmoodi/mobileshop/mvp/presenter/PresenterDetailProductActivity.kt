@@ -1,4 +1,4 @@
-package ir.hamedmahmoodi.mobileshop.mvp.pressenter
+package ir.hamedmahmoodi.mobileshop.mvp.presenter
 
 import android.content.Context
 import ir.hamedmahmoodi.mobileshop.androidWrapper.ActivityUtils

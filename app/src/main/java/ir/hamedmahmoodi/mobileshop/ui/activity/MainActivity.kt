@@ -8,7 +8,7 @@ import ir.hamedmahmoodi.mobileshop.R
 import ir.hamedmahmoodi.mobileshop.adapter.viewPager.CustomSliderPagerAdapter
 import ir.hamedmahmoodi.mobileshop.androidWrapper.ActivityUtils
 import ir.hamedmahmoodi.mobileshop.mvp.model.ModelMainActivity
-import ir.hamedmahmoodi.mobileshop.mvp.pressenter.PresenterMainActivity
+import ir.hamedmahmoodi.mobileshop.mvp.presenter.PresenterMainActivity
 import ir.hamedmahmoodi.mobileshop.mvp.view.ViewMainActivity
 
 class MainActivity : AppCompatActivity(), ActivityUtils {
