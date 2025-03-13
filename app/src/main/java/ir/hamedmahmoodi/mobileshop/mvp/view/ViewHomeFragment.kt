@@ -8,8 +8,15 @@ import android.widget.FrameLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import ir.hamedmahmoodi.mobileshop.adapter.recycler.NewProductRecyclerAdapter
+import ir.hamedmahmoodi.mobileshop.adapter.recycler.SpecialOfferProductRecyclerAdapter
+import ir.hamedmahmoodi.mobileshop.adapter.recycler.TopProductRecyclerAdapter
 import ir.hamedmahmoodi.mobileshop.androidWrapper.ActivityUtils
+import ir.hamedmahmoodi.mobileshop.androidWrapper.PicassoHandler
+import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.ProductsModel
+import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.RequestMain
 import ir.hamedmahmoodi.mobileshop.databinding.FragmentHomeBinding
+import ir.hamedmahmoodi.mobileshop.ui.activity.ListProductActivity
 
 class ViewHomeFragment : FrameLayout {
 
@@ -27,81 +34,81 @@ class ViewHomeFragment : FrameLayout {
     val binding =
         FragmentHomeBinding.inflate(LayoutInflater.from(context))
 
- /*       fun startGetData() {
-            binding.content.visibility = View.INVISIBLE
-            binding.progressBar.visibility = View.VISIBLE
-        }
+    fun startGetData() {
+        binding.content.visibility = View.INVISIBLE
+        binding.progressBar.visibility = View.VISIBLE
+    }
 
-        fun endGetData() {
-            binding.content.visibility = View.VISIBLE
-            binding.progressBar.visibility = View.INVISIBLE
-        }
+    fun endGetData() {
+        binding.content.visibility = View.VISIBLE
+        binding.progressBar.visibility = View.INVISIBLE
+    }
 
-        fun endProgress() {
-            binding.progressBar.visibility = View.INVISIBLE
-        }
+    fun endProgress() {
+        binding.progressBar.visibility = View.INVISIBLE
+    }
 
-        fun initialized(data: RequestMain) {
+    fun initialized(data: RequestMain) {
 
-            binding.sliderViewPager.layoutDirection = View.LAYOUT_DIRECTION_RTL
-            activityUtils.setViewPagerFragment(binding.sliderViewPager, data.sliders)
+        binding.sliderViewPager.layoutDirection = View.LAYOUT_DIRECTION_RTL
+        activityUtils.setViewPagerFragment(binding.sliderViewPager, data.sliders)
 
-            binding.newPastryRecycler.getRecycler().layoutManager =
-                LinearLayoutManager(context, RecyclerView.HORIZONTAL, true)
-            binding.newPastryRecycler.getRecycler().adapter =
-                NewPastryRecyclerAdapter(data.pastries[0].pastries, context)
+        binding.newProductRecycler.getRecycler().layoutManager =
+            LinearLayoutManager(context, RecyclerView.HORIZONTAL, true)
+        binding.newProductRecycler.getRecycler().adapter =
+            NewProductRecyclerAdapter(data.pastries[0].pastries, context)
 
-            binding.specialOfferPastryRecycler.getRecycler().layoutManager =
-                LinearLayoutManager(context, RecyclerView.HORIZONTAL, true)
-            val specialOfferData = data.pastries[1].pastries
-            specialOfferData.add(
+        binding.specialOfferProductRecycler.getRecycler().layoutManager =
+            LinearLayoutManager(context, RecyclerView.HORIZONTAL, true)
+        val specialOfferData = data.pastries[1].pastries
+        specialOfferData.add(
+            0,
+            ProductsModel(
                 0,
-                PastriesModel(
-                    0,
-                    "",
-                    0,
-                    "",
-                    0,
-                    0,
-                    false,
-                    ""
-                )
+                "",
+                0,
+                "",
+                0,
+                0,
+                false,
+                ""
             )
-            specialOfferData.add(
-                PastriesModel(
-                    0,
-                    "",
-                    0,
-                    "",
-                    0,
-                    0,
-                    false,
-                    ""
-                )
+        )
+        specialOfferData.add(
+            ProductsModel(
+                0,
+                "",
+                0,
+                "",
+                0,
+                0,
+                false,
+                ""
             )
-            binding.specialOfferPastryRecycler.getRecycler().adapter =
-                SpecialOfferPastryRecyclerAdapter(specialOfferData, context)
+        )
+        binding.specialOfferProductRecycler.getRecycler().adapter =
+            SpecialOfferProductRecyclerAdapter(specialOfferData, context)
 
-            binding.topPastryRecycler.getRecycler().layoutManager =
-                GridLayoutManager(context, 2, RecyclerView.VERTICAL, false)
-            binding.topPastryRecycler.getRecycler().adapter =
-                TopPastryRecyclerAdapter(data.pastries[2].pastries, context)
+        binding.topProductRecycler.getRecycler().layoutManager =
+            GridLayoutManager(context, 2, RecyclerView.VERTICAL, false)
+        binding.topProductRecycler.getRecycler().adapter =
+            TopProductRecyclerAdapter(data.pastries[2].pastries, context)
 
-            if (data.banners.isNotEmpty() && data.banners[0].large.isNotEmpty())
-                PicassoHandler.setPicassoBanner(binding.imgBanner, data.banners[0].large)
+        if (data.banners.isNotEmpty() && data.banners[0].large.isNotEmpty())
+            PicassoHandler.setPicassoBanner(binding.imgBanner, data.banners[0].large)
 
-            binding.newPastryRecycler.getAll().setOnClickListener {
-                val intent = Intent(context, ListPastryActivity::class.java)
-                intent.putExtra(ListPastryActivity.TYPE, ListPastryActivity.NEW)
-                context.startActivity(intent)
-            }
+        binding.newProductRecycler.getAll().setOnClickListener {
+            val intent = Intent(context, ListProductActivity::class.java)
+            intent.putExtra(ListProductActivity.TYPE, ListProductActivity.NEW)
+            context.startActivity(intent)
+        }
 
-            binding.topPastryRecycler.getAll().setOnClickListener {
-                val intent = Intent(context, ListPastryActivity::class.java)
-                intent.putExtra(ListPastryActivity.TYPE, ListPastryActivity.RATE)
-                context.startActivity(intent)
-            }
+        binding.topProductRecycler.getAll().setOnClickListener {
+            val intent = Intent(context, ListProductActivity::class.java)
+            intent.putExtra(ListProductActivity.TYPE, ListProductActivity.RATE)
+            context.startActivity(intent)
+        }
 
-        }*/
+    }
 
 }

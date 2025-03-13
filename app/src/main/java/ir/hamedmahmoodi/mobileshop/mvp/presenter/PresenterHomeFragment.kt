@@ -2,7 +2,11 @@ package ir.hamedmahmoodi.mobileshop.mvp.presenter
 
 import android.content.Context
 import ir.hamedmahmoodi.mobileshop.androidWrapper.ActivityUtils
+import ir.hamedmahmoodi.mobileshop.androidWrapper.NetworkInfo
+import ir.hamedmahmoodi.mobileshop.data.remote.dataModel.RequestMain
+import ir.hamedmahmoodi.mobileshop.data.remote.ext.CallbackRequest
 import ir.hamedmahmoodi.mobileshop.mvp.ext.BaseLifeCycle
+import ir.hamedmahmoodi.mobileshop.mvp.ext.ToastUtils
 import ir.hamedmahmoodi.mobileshop.mvp.model.ModelHomeFragment
 import ir.hamedmahmoodi.mobileshop.mvp.view.ViewHomeFragment
 
@@ -17,10 +21,10 @@ class PresenterHomeFragment(
 
     private fun createSlider() {
 
-    /*    view.startGetData()
+        view.startGetData()
 
         if (NetworkInfo.internetInfo(context, this))
-            sendRequest()*/
+            sendRequest()
 
     }
 
@@ -30,7 +34,7 @@ class PresenterHomeFragment(
 
     private fun sendRequest() {
 
-   /*     model.getContent(
+        model.getContent(
             object : CallbackRequest<RequestMain> {
 
                 override fun onSuccess(code: Int, data: RequestMain) {
@@ -49,7 +53,7 @@ class PresenterHomeFragment(
                 }
 
             }
-        )*/
+        )
 
     }
 }

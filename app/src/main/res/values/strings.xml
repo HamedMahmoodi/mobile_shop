@@ -89,4 +89,7 @@
     <string name="search_desc">search_desc</string>
     <string name="favorite">علاقه مندی ها</string>
     <string name="not_favorite">محصولی وجود ندارد</string>
+    <string name="all">بیشتر</string>
+    <string name="category_desc">category</string>
+    <string name="banner_desc">banner</string>
 </resources>

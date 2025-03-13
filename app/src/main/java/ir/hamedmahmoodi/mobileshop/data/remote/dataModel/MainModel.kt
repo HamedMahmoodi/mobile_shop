@@ -2,10 +2,10 @@ package ir.hamedmahmoodi.mobileshop.data.remote.dataModel
 
 import com.google.gson.annotations.SerializedName
 
-data class MainPastriesModel(
+data class MainProductsModel(
     @SerializedName("ID") val id: String,
     val title: String,
-    val pastries: ArrayList<PastriesModel>,
+    val pastries: ArrayList<ProductsModel>,
 )
 
 data class BannersModel(
@@ -13,7 +13,7 @@ data class BannersModel(
     val large: String,
 )
 
-data class PastriesModel(
+data class ProductsModel(
     @SerializedName("ID") val id: Int,
     val title: String,
     @SerializedName("min_order") val minOrder: Int,
@@ -28,6 +28,6 @@ data class RequestMain(
     val success: Int,
     val message: String,
     val sliders: ArrayList<String>,
-    val pastries: ArrayList<MainPastriesModel>,
+    val pastries: ArrayList<MainProductsModel>,
     val banners: ArrayList<BannersModel>,
 )
